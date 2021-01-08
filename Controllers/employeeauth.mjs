@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs"
 import jsonwebtoken from "jsonwebtoken";
-import employeeModel from "../Models/User.mjs"
+import employeeModel from "../Models/employeeModel.mjs"
 
 // import crypto from "crypto";
 
 //@ desc post method to the employee register
 // @route Post /employee/auth/regsiter
 // @access_public
-
 // console.log(crypto.randomBytes(64).toString('hex'));
 
 export const resgisterFunc = async (req, res, next) => {
@@ -60,9 +59,9 @@ export const loginFunc = async (req, res) => {
                     }
                 })
 
-                res.status(200).json({header_token:token,data:user})
+                res.status(200).json({auth_token:token,data:user})
         } else {
-            res.status(203).json({msg:'password or userName incorrect'})
+                res.status(203).json({msg:'password or userName incorrect'})
         }
     })
 

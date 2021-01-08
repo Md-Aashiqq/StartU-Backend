@@ -19,6 +19,10 @@ const employeeSchema = new mongoose.Schema({
         maxlength: 255,
         required:[true,'Please Provided the Email']
     },
+    isRegister: {
+        type: Boolean,
+      default:false  
+    },
     createdAt: {
         type: Date,
         default:Date.now
