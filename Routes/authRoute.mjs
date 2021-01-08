@@ -1,11 +1,13 @@
 import express from "express"
 
+import { resgisterFunc , loginFunc } from "../Controllers/employeeauth.mjs"
+
 const router = express.Router();
 
 
-router.get('/register', (req , res) => {
-    res.send({msg : 'Register Route'})
-})
+router.route('/login').post(loginFunc);
+
+router.route('/register').post(resgisterFunc)
 
 const authRouter = router;
 

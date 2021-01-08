@@ -2,6 +2,7 @@
 import dotenv from 'dotenv';
 dotenv.config()
 import express from "express"
+import mongoose from 'mongoose'
 const app = express()
 
 
@@ -22,6 +23,10 @@ const port = process.env.PORT || 3000
 
 app.use('/auth', authRouter);
 
+//connect to database
+
+
+mongoose.connect("mongodb+srv://admin-ashick:Md.aashiq.2801@cluster0.vce2n.mongodb.net/stratup?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true})
 
 
 app.get('/', (req, res) => {  

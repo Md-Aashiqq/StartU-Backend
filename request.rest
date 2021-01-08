@@ -3,3 +3,11 @@ GET  http://localhost:3000/auth/register
 
 
 ### 
+
+
+POST http://localhost:3000/auth/register
+
+content-type: application/json 
+{
+  "username" :"asick"
+}
