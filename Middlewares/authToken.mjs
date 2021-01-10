@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 import jsonwebtoken from "jsonwebtoken";
 
-import employeeModel from "../Models/employeeModel.mjs"
+import employeeModel from "../Models/employee/employeeModel.mjs"
 
 
 export const authToken = async (req, res, next) => {

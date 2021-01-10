@@ -8,7 +8,7 @@ const app = express()
 
 // import Routerss
 
-import authRouter from './Routes/authRoute.mjs'
+import authRouter from './Routes/employeeRoute.mjs'
 
 
 
@@ -21,12 +21,12 @@ const port = process.env.PORT || 3000
 
 // Route maintainces 
 
-app.use('/auth', authRouter);
+app.use('/employee', authRouter);
 
 //connect to database
 
 
-mongoose.connect("mongodb+srv://admin-ashick:Md.aashiq.2801@cluster0.vce2n.mongodb.net/stratup?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true})
+mongoose.connect("mongodb+srv://admin-ashick:Md.aashiq.2801@cluster0.vce2n.mongodb.net/stratup?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex: true})
 
 
 app.get('/', (req, res) => {  
