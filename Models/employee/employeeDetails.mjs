@@ -5,6 +5,10 @@ const employeeDetailSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "employeeModel",
   },
+  employeeFoodId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "employeeFoodModel",
+  },
   // _id: mongoose.Schema.Types.ObjectId,
   serviceName: {
     type: String,

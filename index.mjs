@@ -18,7 +18,12 @@ app.use(express.json());
 //connect to database
 mongoose.connect(
   "mongodb+srv://admin-ashick:Md.aashiq.2801@cluster0.vce2n.mongodb.net/stratup?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: true,
+  }
 );
 
 // Employee Route maintainces
