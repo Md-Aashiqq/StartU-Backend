@@ -1,5 +1,4 @@
 import employeeFoodModel from "../Models/employee/employeeFood.mjs";
-// import epmloyeeDetail from "../Models/employee/employeeDetails";
 import employeeDetail from "../Models/employee/employeeDetails.mjs";
 
 export const foodRegisterFunc = async (req, res, next) => {
@@ -19,10 +18,6 @@ export const foodRegisterFunc = async (req, res, next) => {
       }
     );
 
-    // const da = await employeeDetail.find({
-    //   employeId: employeeDetail.base.Types.ObjectId(userId),
-    // });
-
     res
       .status(201)
       .json({ sucess: true, msg: "Sucesss", data: data, da: da, id: userId });
@@ -31,5 +26,4 @@ export const foodRegisterFunc = async (req, res, next) => {
     res.status(501).json({ msg: "failed" });
   }
 
-  //   res.status(201).json({ data: foods });
 };
